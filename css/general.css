@@ -1,0 +1,52 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #363636;
+
+}
+
+.fontInter{
+  font-family: 'Inter', sans-serif;
+}
+
+body{
+  background: #F3F3F3;
+}
+
+h1{
+  font-size: 32px;
+}
+
+h2{
+  font-size: 20px;
+}
+
+h3{
+  font-size: 16px;
+}
+
+p{
+  font-size: 12px;
+}
+
+.actionBtn{
+  padding: 8px 32px;
+  background: #FFB72A;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.secondBtn{
+  background: rgba(0, 0, 0, 0);
+  border: 3px solid #FFB72A;
+}
+
+.highlight{
+  color: #FFB72A;
+  font-weight: 700;
+}
