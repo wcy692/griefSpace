@@ -1,0 +1,31 @@
+#otpForm{
+  width: 90%;
+}
+
+#otpForm form .pwdContainer input{
+  border-radius: 0;
+  margin: 0 6px;
+  background: #000000;
+  height: 64px;
+  width: 15%;
+  max-width: 72px;
+  background: #dedede;
+  text-align: center;
+  font-size: 28px;
+}
+
+#otpForm form h3{
+  margin-left: 6px;
+  line-height: 1;
+}
+
+#otpForm form .pwdContainer{
+  margin: 16px 0;
+}
+
+
+@media only screen and (min-width: 768px){
+  #otpForm form .pwdContainer input{
+    height: 72px;
+  }
+}

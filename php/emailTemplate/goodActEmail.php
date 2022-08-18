@@ -37,7 +37,7 @@
                         margin: 8px 0;
                         line-height: 1.3;'>Congrats, you\'ve just activated your account. From now on, you can enjoy all the features on our application. We look forward to seeing you again.</p>
                         <div style='padding: 24px 0;text-align:center;'>
-                        <a href='http://localhost/test_login/html/login.php' style='border-radius: 20px;
+                        <a href='http://localhost/griefSpace/html/login.php' style='border-radius: 20px;
                       padding: 10px 16px;
                       font-size: 20px;
                       color: #FFFEFE;
@@ -46,7 +46,7 @@
                         margin: 20px 0 8px 0;
                         line-height: 1.3;'>If that wasn't you submitting this request, please contact our staff immediately. You might also consider resetting your password.</p>
                         <div style='padding: 24px 0;text-align:center;'>
-                        <a href='http://localhost/test_login/html/resend/getResetPwdLetter.php' style='border-radius: 20px;
+                        <a href='http://localhost/griefSpace/html/resend/getResetPwdLetter.php' style='border-radius: 20px;
                       padding: 10px 16px;
                       font-size: 20px;
                       color: #ff9b00;

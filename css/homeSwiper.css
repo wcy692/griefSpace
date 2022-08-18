@@ -1,6 +1,7 @@
 .mySwiper{
   width: 100%;
   height: 100%;
+  min-height: 100vh;
 }
 
 .mySwiper .swiper-slide{
@@ -41,18 +42,18 @@
   height: auto;
 }
 
-#slide_second .hero{
-  position: relative;
-}
-
-#slide_second .hero img{
-  position: absolute;
-  height: 100%;
-  max-width: 100%;
-  right: -3%;
-  bottom: 20px;
+#slide_second .hero img {
+  height: auto;
+  width: 60%;
+  padding-left: 5%;
 }
 
 #slide_forth .hero img{
   width: 70%;
+}
+
+@media only screen and (min-width: 768px) {
+  .mySwiper, .swiper-pagination{
+    display: none;
+  }
 }

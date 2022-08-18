@@ -1,0 +1,304 @@
+.modal{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.modal .rightBtnContainer{
+  justify-content: flex-end !important;
+}
+
+.modal .rightBtnContainer #closeJournalBtn{
+  margin: 0 12px;
+  width: 42px;
+  height: 42px;
+}
+
+.modal .rightBtnContainer #emotionSub{
+  margin: 32px 0;
+  padding: 9px 12px;
+  border: none;
+  background: rgba(0, 0, 0, 0);
+}
+
+.modal .rightBtnContainer #emotionSub img{
+  margin: 0 12px;
+}
+
+.modal .container{
+  margin: 3vh auto;
+  position: relative;
+}
+
+.modal .heading{
+  width: 100% !important;
+  margin-bottom: 12px;
+}
+
+.modal .container .slide{
+  width: 100%;
+  height: auto;
+  transition: 0.5s ease;
+}
+
+/* emotion slide */
+.modal #emotionSlide{
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.modal .questionSlide{
+  position: absolute;
+  top: 0;
+  left: 150%;
+}
+
+.modal #emotionSlide .heading:nth-of-type(2){
+  margin: 8px auto 40px auto;
+}
+
+.modal .emotionPanel{
+  width: 90%;
+  margin: 0 auto;
+}
+
+.modal .emotionPanel .selector{
+  margin: 0 4px;
+  cursor: pointer;
+}
+
+.modal .emotionPanel img{
+  min-width: 40px;
+  margin-bottom: 8px;
+}
+
+.modal .emotionPanel .onSelected{
+  min-width: 60px;
+}
+
+.modal #emotionForm input{
+  display: none;
+}
+
+/* question slide */
+.slide .head{
+  margin: 0 5%;
+}
+
+.slide .question{
+  width: 95%;
+  margin: 8px 0;
+}
+
+.slide .question h3,
+.slide .fileCount{
+  color: #9066E9;
+  padding-left: 2px;
+}
+
+.slide .question h2{
+  width: 80%;
+}
+
+.editBtn img{
+  width: 36px;
+}
+
+.textAreaForm{
+  width: 95%;
+  margin: 20px auto;
+}
+
+.textAreaForm textarea{
+  width: 95%;
+  border: none;
+  border-radius: 10px;
+  background: #D9D6FF;
+  padding: 20px;
+  font-size: 20px;
+  font-weight: 600;
+  font-family: sans-serif;
+  resize: none;
+  margin: 8px 20px 4px 0;
+}
+
+.textAreaForm textarea::placeholder{
+  font-size: 20px;
+  font-weight: 800;
+  text-align: center;
+  color: #363636;
+  align-self: center;
+  padding: 50% 0;
+}
+
+.questionSlide .bottomBtns{
+  width: 95%;
+  margin: 24px auto 4px auto;
+}
+
+.questionSlide .bottomBtns h5{
+  text-align: left;
+  font-size: 20px;
+  max-width: 80%;
+  line-height: 0.9;
+}
+
+.questionSlide .bottomBtns .right{
+  margin: 0 8px 0 12px;
+}
+
+.questionSlide .bottomBtns .right h5{
+  padding: 0 2px;
+}
+
+.questionSlide .bottomBtns img{
+  padding: 4px;
+  width: 40px;
+  height: 24px;
+  margin: 2px 4px 0 0;
+}
+
+.questionSlide .bottomBtns .left{
+  margin: 0 12px 0 20px;
+}
+
+.questionSlide .bottomBtns .left img{
+  transform: rotate(180deg);
+}
+
+/* modal hidden page*/
+.modal .question-wrapper{
+  position: relative;
+}
+
+.modal .question-wrapper .slide{
+  transition: 0.3s ease;
+}
+
+.modal .hiddenSlide{
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  top: -150%;
+  opacity: 0;
+  left: 0;
+  z-index: 20;
+  border-radius: 10px;
+  transition: 0.6s ease;
+}
+
+.selectQuestion{
+  width: 100%;
+  height: auto;
+  transition: 0.5s ease;
+}
+
+#questionConn{
+  height: 100%;
+}
+
+.selectorWrapper{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: -150%;
+  background: #F3F3F3;
+  z-index: 20;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  padding: 0 0 12px 0;
+  transition: 0.4s ease;
+}
+
+.selectorWrapper .heading{
+  margin: 12px 0 20px 0;
+}
+
+.selectorWrapper .rightBtnContainer #quitBtn{
+  margin: 0 12px;
+  width: 32px;
+  height: 32px;
+}
+
+.selectorWrapper .selectQuestion .question{
+  width: 80%;
+  margin: 0 auto 20px auto;
+}
+
+.selectorWrapper .selectQuestion .question h5{
+  padding: 6px 0;
+  color: #9066E9;
+}
+
+.selectorWrapper .selectQuestion .question h3{
+  padding: 4px 0;
+}
+
+@media only screen and (min-width: 768px) {
+
+  .modal .emotionPanel img{
+    min-width: 80px;
+  }
+
+  .modal .emotionPanel .selector{
+    margin: 0 12px;
+  }
+
+  .textAreaForm textarea::placeholder{
+    padding: 25% 0;
+  }
+
+  .modal .rightBtnContainer{
+    margin: 6vh 0 20px 0;
+  }
+
+  .modal .rightBtnContainer h5{
+    font-size: 32px;
+  }
+
+  .modal .rightBtnContainer #emotionSub img{
+    height: 28px;
+  }
+
+  .modal .rightBtnContainer #closeJournalBtn{
+    width: 56px;
+    height: 56px;
+  }
+
+  .questionSlide .bottomBtns{
+    margin: 48px auto 4px auto;
+  }
+
+}
+
+@media only screen and (min-width: 1200px){
+    #questionConn{
+      width: 65%;
+    }
+    .question-wrapper{
+      width: 90%;
+      margin: 0 auto;
+    }
+    #emotionSlide .heading{
+      font-size: 32px;
+    }
+    .modal .rightBtnContainer {
+      margin: 2vh auto 0 auto;
+    }
+    .modal .emotionPanel{
+      /* justify-content: flex-start; */
+    }
+    .modal .rightBtnContainer #emotionSub{
+      margin: 64px 0;
+    }
+}
+
+@media only screen and (min-width: 1300px){
+
+}

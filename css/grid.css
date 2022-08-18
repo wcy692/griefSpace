@@ -1,0 +1,85 @@
+.container{
+  width: 90%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.page{
+  margin: 6vh auto 15vh auto;
+}
+
+.container .sortContainer{
+  margin-bottom: 8px;
+}
+
+.container .heading{
+  width: 95%;
+  margin: 12px auto 0px auto;
+  line-height: 1;
+}
+
+.container .sortContainer{
+  width: 90%;
+  margin: 0 auto 8px auto;
+}
+
+.boxWrapper{
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  flex-wrap: wrap;
+}
+
+.boxWrapper .box{
+  max-width: 50%;
+  width: 45%;
+  height: auto;
+  margin: 4px 2%;
+  cursor: pointer;
+}
+
+.boxWrapper .box .moreBtn{
+  min-width: 24px;
+  border: none;
+  cursor: pointer;
+}
+
+.boxWrapper .box .moreBtn img{
+  padding-top: 4px;
+}
+
+.boxWrapper .box .preview{
+  width: 100%;
+  min-height: 100px;
+  background: #FFBB6A;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0px 2px 10px 4px rgba(255,187,106,0.25);
+}
+
+.boxWrapper .createBox .preview img{
+  height: 60%;
+}
+
+.boxWrapper .box .desc{
+  margin: 8px 2px;;
+}
+
+.boxWrapper .box .desc p{
+  font-weight: 500;
+}
+
+@media only screen and (min-width: 1080px) {
+  .container{
+    width: 80%;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .page {
+    margin: 3vh auto;
+}
+  .container .heading{
+    width: 90%;
+  }
+}

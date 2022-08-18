@@ -1,0 +1,198 @@
+#insightPanel{
+  margin: 6vh auto 18vh auto;
+}
+
+.calWrapper{
+  height: 550px;
+  width: 95%;
+  margin: 0 auto;
+}
+
+.fc table{
+  font-size: 14px;
+}
+
+.fc-toolbar-chunk{
+  width: auto ;
+}
+
+.fc .fc-button-primary{
+  border-radius: 10px;
+  background-color: #B693FF;
+  border: none;
+  transition: all 0.2s ease;
+}
+
+.fc .fc-button-primary:hover{
+  background-color: #44FFA5;
+}
+
+.fc-icon{
+  color: #FFFEFE;
+}
+
+.fc .fc-toolbar-title{
+  font-size: 20px ;
+  color: #FFB72A ;
+}
+
+.fc .fc-toolbar.fc-header-toolbar {
+  margin: 28px 0 14px 0;
+}
+
+/* day indicator */
+.fc .fc-col-header-cell-cushion {
+  padding: 8px 4px;
+}
+
+.fc .fc-scrollgrid-section-header.fc-scrollgrid-section-sticky > *{
+  background: rgba(0,0,0,0);
+}
+
+.fc-theme-standard td, .fc-theme-standard th, .fc-theme-standard .fc-scrollgrid{
+  border: none;
+}
+
+/* background event */
+.fc .fc-bg-event{
+  opacity: 1;
+  border-radius: 50% 0;
+}
+
+.fc .fc-bg-event .fc-event-title{
+  margin-top: 24px;
+  font-size: 8px;
+  font-weight: 900;
+  font-style: unset;
+  line-height: 1;
+}
+
+.fc .fc-daygrid-day.fc-day-today{
+  background-color: rgb(144 102 233 / 57%);
+}
+
+/* emotion indicator */
+
+#insightPanel .indicator h3{
+    color: #9066E9;
+    padding-left: 2px;
+    line-height: 1;
+    margin-bottom: 8px;
+}
+
+.container .indicator{
+  width: 80%;
+  margin: 0 auto 0 20px;
+}
+
+.container .indicator .color{
+  width: 32px;
+  height: 32px;
+  margin-right: 6px;
+  border-radius: 50%;
+}
+
+.emotion-container{
+  margin: 8px 12px 8px 0;
+}
+
+.emotion-container p{
+  font-weight: 600;
+}
+
+.emotion-container .color{
+  border: 2px solid #E1E1E1;
+}
+
+.emotion-container .emotion-brown{
+  background: #B26B45;
+}
+
+.emotion-container .emotion-blue{
+  background: #256FFF;
+}
+
+.emotion-container .emotion-white{
+  background: #f4eacd;
+}
+
+.emotion-container .emotion-yellow{
+  background: #feff24;
+}
+
+.emotion-container .emotion-orange{
+  background: #FD6C2E;
+}
+
+@media only screen and (min-width: 768px) {
+  #insightPanel{
+    margin: 3vh auto;
+    width: 70%;
+  }
+  .calWrapper{
+    width: 85%;
+    height: 600px;
+  }
+  .fc .fc-toolbar.fc-header-toolbar{
+    margin: 32px 0 20px 0;
+  }
+  /* .fc .fc-toolbar-title{
+    font-size: 28px;
+  } */
+  .fc .fc-col-header-cell-cushion{
+    font-size: 16px;
+    padding: 8px 4px 20px 4px;
+  }
+  .fc .fc-daygrid-day-number{
+    font-size: 16px;
+  }
+  .fc .fc-bg-event .fc-event-title{
+    font-size: 12px;
+  }
+  .container .indicator{
+    margin: 32px auto;
+  }
+  .container .indicator .color{
+    width: 56px;
+    height: 56px;
+  }
+  .emotion-container{
+    margin: 8px 32px 8px 0;
+  }
+  .emotion-container p{
+    font-size: 20px;
+  }
+}
+
+@media only screen and (min-width: 1200px){
+  #insightPanel .heading{
+    font-size: 32px;
+  }
+  .insightWrapper{
+    display: flex;
+    justify-content: center;
+  }
+  .calWrapper{
+    width: 50%;
+  }
+  .container .indicator{
+    width: 30%;
+  }
+  .container .indicator .color {
+    width: 32px;
+    height: 32px;
+  }
+  .indicator-container{
+    flex-wrap: wrap;
+  }
+  .emotion-container {
+    margin: 8px 32px 8px 0;
+  }
+  .indicator-container .left .emotion-container:first-of-type,
+  .indicator-container .middle .emotion-container:first-of-type{
+    margin: 8px 32px 16px 0;
+  }
+  .insightWrapper{
+    margin-top: 3vh;
+  }
+}

@@ -39,7 +39,7 @@
                         margin: 8px 0;
                         line-height: 1.3;'>Click the button below and finish the activation.</p>
                         <div style='padding: 24px 0;text-align:center;'>
-                        <a href='http://localhost/test_login/html/activationPage.php?token=$token' style='border-radius: 20px;
+                        <a href='http://localhost/griefSpace/html/activationPage.php?token=$token' style='border-radius: 20px;
                       padding: 10px 16px;
                       font-size: 20px;
                       color: #FFFEFE;
