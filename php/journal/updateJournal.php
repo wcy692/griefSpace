@@ -119,8 +119,8 @@
         $sendRes = '';
         if ($journal_updated == 1) {
           // success and send email based on $journal_updated
-          require '../email/sendEmail.php';
-          require '../emailTemplate/journalUpdatedEmail.php';
+          require_once '../email/sendEmail.php';
+          require_once '../emailTemplate/journalUpdatedEmail.php';
           $subject = getSubject();
           $body = getBody();
           $sendRes = sendEmail($session_uid, $email, $subject, $body, null, null);
