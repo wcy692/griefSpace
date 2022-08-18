@@ -1,3 +1,4 @@
+
 .textContainer{
   text-align: center;
   margin-top: 4vh;
@@ -14,45 +15,10 @@
   line-height: 1.1
 }
 
-.message{
-  margin: 10px;
-  padding: 20px;
-  background: #ff7575;
-  color: #f5f5f5;
-}
-
-.message h3{
-  margin-bottom: 6px;
-}
-
-.message img{
-  width: 50%;
-  height: auto;
-  margin: 20px;
-}
-
-.green{
-  background: #4bdd41 !important;
-  color: #f5f5f5 !important;
-  text-align: center;
-  padding: 8vh 32px;
-}
-
-.orange{
-  background: #bfdd41 !important;
-  color: #f5f5f5 !important;
-  text-align: center;
-  padding: 8vh 32px;
-}
-
-.orange button{
-  background: #ff972a;
-}
-
 .formContainer{
   width: 75%;
   height: auto;
-  margin: 3vh auto 0 auto;
+  margin: 6vh auto 10vh auto;
 }
 
 .wrapper{
@@ -61,8 +27,7 @@
 }
 
 .formContainer form .heading{
-  margin: 4vh 0 6px 0;
-  color: #FFFEFE;
+  margin: 20px 0 20px 0;
 }
 
 .formContainer form{
@@ -72,7 +37,6 @@
   width: auto;
   height: 100%;
   margin: 0 10px;
-  background: #9E96FF;
   border-radius: 10px;
   transition: 0.1s ease;
   opacity: 0;
@@ -94,12 +58,18 @@
 
 .formContainer form .inputContainer{
   width: 90%;
+}
+
+.formContainer .loginForm .inputContainer{
+  margin: 20px 0;
+}
+
+.formContainer .regForm .inputContainer{
   margin: 6px 0;
 }
 
 .formContainer form .inputContainer label{
   margin-left: 6px;
-  color: #FFFEFE;
 }
 
 .formContainer form .inputContainer input{
@@ -128,7 +98,7 @@
 }
 
 .formContainer form .actionBtn{
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 .formContainer form .linkContainer{
@@ -137,7 +107,6 @@
 }
 
 .formContainer form .formLink{
-  color: #FFFEFE;
   text-decoration: none;
   font-size: 16px;
   text-align: center;
@@ -168,4 +137,167 @@
 
 .swipeReminder .swipeReminderConn img{
   margin-right: 3%;
+}
+
+#slide_one .heroText,
+#slide_forth .heroText{
+  height: 70vh;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+#slide_one .heroText .upperText,
+#slide_forth .heroText .upperText{
+  margin: 28px auto 8px auto;
+}
+
+#slide_third img{
+  width: 60%;
+}
+
+.bigHome{
+  color: #525252;
+  width: 95%;
+  margin: 0 auto;
+  display: none;
+}
+
+.bigHome .wrapper{
+  min-height: 80vh;
+  position: relative;
+}
+
+.bigHome .wrapper .left,
+.bigHome .wrapper .right{
+  width: 50%;
+  margin: 0 32px;
+}
+
+.bigHome #loginIntro .left, .bigHome #loginIntro .right{
+  margin: 0;
+}
+
+.bigHome .wrapper .container{
+  width: 90%;
+}
+
+.bigHome #loginIntro .container{
+  width: 80%;
+}
+
+.bigHome #loginIntro .container h5{
+  text-align: center;
+}
+
+.bigHome #loginIntro .purple{
+  margin-left: 20px;
+}
+
+.bigHome .wrapper .container h5{
+  line-height: 1.1;
+  font-weight: 600;
+}
+
+.bigHome .wrapper .container .right h1{
+  margin: 0 0 24px 24px;
+}
+
+.bigHome .wrapper .container .btnContainer{
+  margin: 16px 0;
+}
+
+.bigHome .purple{
+  color: #9066E9;
+}
+
+.bigHome .orange{
+  font-weight: 500;
+}
+
+.bigHome .heading{
+  position: absolute;
+  top: 6%;
+  left: 10%;
+}
+
+.bigHome .wrapper .container .desc h1{
+  font-size: 36px;
+  line-height: 1;
+}
+
+.bigHome .wrapper .container .desc .upper{
+  margin: 16px 0 8px 0;
+}
+
+.bigHome .wrapper .container .right img{
+  width: 110%;
+}
+
+#calendar-hero{
+  width: 80%;
+}
+
+#journal-hero{
+  width: 80%;
+  padding-left: 8%;
+}
+
+@media only screen and (min-width: 768px) {
+
+  .bigHome{
+    display: block;
+  }
+
+  .formContainer form{
+    width: 100%;
+  }
+
+  .formContainer form .inputContainer input{
+    height: 48px;
+  }
+
+  .formContainer form .formLink{
+    font-size: 20px;
+    margin: 12px auto;
+  }
+
+}
+
+@media only screen and (min-width: 1080px) {
+  .bigHome{
+    width: 85%;
+  }
+  .bigHome .wrapper{
+    min-height: 100vh;
+  }
+}
+
+@media only screen and (min-width: 1200px){
+  .bigHome .wrapper{
+    min-height: 60vh;
+    margin: 12vh 0;
+  }
+  .bigHome .heading{
+    top: 8%;
+    left: 8%;
+  }
+  .bigHome .wrapper .container .right h1{
+    margin: 0 0 24px 23%;
+  }
+  #journal-hero{
+    width: 70%;
+  }
+}
+
+@media only screen and (min-width: 1300px){
+  .bigHome{
+    width: 80%;
+  }
+  .bigHome .wrapper{
+    min-height: 70vh;
+    margin: 12vh 0;
+  }
+  #calendar-hero {
+    width: 60%;
+  }
 }

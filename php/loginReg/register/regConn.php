@@ -9,31 +9,31 @@ use PHPMailer\PHPMailer\Exception;
 
     //input handler
     if(empty($uid) || empty($email) || empty($pwd) || empty($confirmPwd)){
-      header("Location: ../../../html/login.php?status=empty&uid=$uid&email=$email");
+      header("Location: ../../../html/loginPage.php?status=empty&uid=$uid&email=$email");
       exit();
     } else if(preg_match('/\s/', $uid) || preg_match('/\s/', $pwd)){
-      header("Location: ../../../html/login.php?status=whitespace&uid=$uid&email=$email");
+      header("Location: ../../../html/loginPage.php?status=whitespace&uid=$uid&email=$email");
       exit();
     } else if($confirmPwd != $pwd){
-      header("Location: ../../../html/login.php?status=confirmpwd&uid=$uid&email=$email");
+      header("Location: ../../../html/loginPage.php?status=confirmpwd&uid=$uid&email=$email");
       exit();
     } else if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
-      header("Location: ../../../html/login.php?status=email&uid=$uid&email=$email");
+      header("Location: ../../../html/loginPage.php?status=email&uid=$uid&email=$email");
       exit();
     } else if(strlen($pwd) < 8){
-      header("Location: ../../../html/login.php?status=pwdlen&uid=$uid&email=$email");
+      header("Location: ../../../html/loginPage.php?status=pwdlen&uid=$uid&email=$email");
       exit();
     } else if(!preg_match('/\d/', $pwd)){
-      header("Location: ../../../html/login.php?status=pwdDigit&uid=$uid&email=$email");
+      header("Location: ../../../html/loginPage.php?status=pwdDigit&uid=$uid&email=$email");
       exit();
     } else if(!preg_match('/[A-Z]/', $pwd)){
-      header("Location: ../../../html/login.php?status=pwdUpper&uid=$uid&email=$email");
+      header("Location: ../../../html/loginPage.php?status=pwdUpper&uid=$uid&email=$email");
       exit();
     } else if(!preg_match('/[a-z]/', $pwd)){
-      header("Location: ../../../html/login.php?status=pwdLower&uid=$uid&email=$email");
+      header("Location: ../../../html/loginPage.php?status=pwdLower&uid=$uid&email=$email");
       exit();
     } else if(!preg_match('/\W/', $pwd)){
-      header("Location: ../../../html/login.php?status=pwdSpecial&uid=$uid&email=$email");
+      header("Location: ../../../html/loginPage.php?status=pwdSpecial&uid=$uid&email=$email");
       exit();
     }
 
@@ -47,7 +47,7 @@ use PHPMailer\PHPMailer\Exception;
     $stmt->execute();
     $count = count($stmt->fetchAll());
     if ($count > 0) {
-      header("Location: ../../../html/login.php?status=userexist&uid=$uid&email=$email");
+      header("Location: ../../../html/loginPage.php?status=userexist&uid=$uid&email=$email");
       exit();
     }
 
@@ -66,7 +66,7 @@ use PHPMailer\PHPMailer\Exception;
     $stmt->execute();
     $result = $stmt->fetchAll();
     if (count($result) > 1 || count($result) < 0) {
-      header("Location: ../../../html/login.php?status=error&uid=$uid&email=$email");
+      header("Location: ../../../html/loginPage.php?status=error&uid=$uid&email=$email");
       exit();
     } else{
       $idNum = (int)$result[0]['id'];
@@ -86,18 +86,24 @@ use PHPMailer\PHPMailer\Exception;
     $stmt->bindParam(3, $expiry, PDO::PARAM_STR);
     $stmt->execute();
 
+    //populate user_notification table
+    $sql = 'INSERT INTO user_notification(userdata_id) VALUES(?);';
+    $stmt = $pdo->prepare($sql);
+    $stmt->bindParam(1, $idNum, PDO::PARAM_INT);
+    $stmt->execute();
+
     //send activation email
     require '../../email/sendEmail.php';
     require '../../emailTemplate/regEmail.php';
     $subject = getSubject();
     $body = getBody($hexToken);
-    $successUrl = "Location: ../../../html/login.php?reg=success";
-    $failUrl = "Location: ../../../html/login.php?status=sendErr&uid=$uid&email=$email";
+    $successUrl = "Location: ../../../html/loginPage.php?reg=success";
+    $failUrl = "Location: ../../../html/loginPage.php?status=sendErr&uid=$uid&email=$email";
     sendEmail($uid, $email, $subject, $body, $successUrl, $failUrl);
     exit();
 
   } else{
-    header("Location: ../../../html/login.php");
+    header("Location: ../../../html/loginPage.php");
     exit();
   }
 

@@ -1,0 +1,56 @@
+.homeBox{
+  width: 80%;
+  height: auto;
+  background: #AAA3FF;
+  color: #FFFEFE;
+  border-radius: 10px;
+  margin: 48px auto;
+  box-shadow: 0px 2px 10px 4px rgb(170 163 255 / 25%);
+  cursor: pointer;
+}
+
+.smallText{
+  width: 95%;
+  margin: 12px auto 0px auto;
+  color: #9066E9;
+}
+
+.homeBox .title{
+  color: #FFFEFE;
+  padding: 64px 0 32px 0;
+}
+
+.homeBox .imgContainer{
+  padding: 0 0 48px 0;
+}
+
+.homeBox .imgContainer img{
+  width: 60%;
+}
+
+@media only screen and (min-width: 768px){
+  .homeBox{
+    width: 70%;
+  }
+}
+
+@media only screen and (min-width: 1200px){
+  .boxWrapper{
+    display: flex;
+    justify-content: center;
+  }
+
+  .homeBox{
+    width: 40%;
+    margin: 48px 20px;
+    border-radius: 20px;
+  }
+
+  .homeBox .imgContainer img {
+    width: 70%;
+  }
+
+  .smallText{
+    width: 90%;
+  }
+}

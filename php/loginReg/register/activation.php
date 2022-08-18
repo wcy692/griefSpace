@@ -81,7 +81,7 @@
     exit();
 
   } else{
-    header("Location:../../../html/login.php");
+    header("Location:../../../html/loginPage.php");
     exit();
   }
 

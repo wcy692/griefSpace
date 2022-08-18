@@ -20,14 +20,28 @@ h1{
 
 h2{
   font-size: 20px;
+  line-height: 1;
 }
 
 h3{
   font-size: 16px;
 }
 
+h4{
+  font-size: 28px;
+}
+
+h5{
+  font-size: 24px;
+  line-height: 1;
+}
+
 p{
-  font-size: 12px;
+  font-size: 14px;
+}
+
+a{
+  text-decoration: none;
 }
 
 .actionBtn{
@@ -41,12 +55,281 @@ p{
   text-decoration: none;
 }
 
+.actionBtn a,
+.actionBtn h5{
+  color: #FFFFFF;
+  font-weight: 400;
+}
+
 .secondBtn{
   background: rgba(0, 0, 0, 0);
   border: 3px solid #FFB72A;
+  color: #FFB72A;
+}
+
+.secondBtn a,
+.secondBtn h5{
+  color: #FFB72A;
+  font-weight: 400;
 }
 
 .highlight{
   color: #FFB72A;
   font-weight: 700;
+}
+
+.inactive{
+  opacity: 0.5 !important;
+  pointer-events: none !important;
+}
+
+button{
+  border: none;
+  cursor: pointer;
+}
+
+.green{
+  color: #4bdd41 !important;
+  text-align: center;
+  padding: 8vh 32px;
+}
+
+.purple{
+  color: #9066E9;
+}
+
+.orange{
+  color: #FFB72A;
+}
+
+.orangeBg{
+  color: #f5f5f5 !important;
+  text-align: center;
+  padding: 8vh 32px;
+}
+
+.orangeBg button{
+  background: #ff972a;
+}
+
+.message{
+  border-radius: 10px;
+  width: 90%;
+  height: auto;
+  min-height: 50vh;
+  z-index: 20;
+  padding: 8vh 20px;
+  margin: 8vh auto;
+}
+
+.message h3{
+  margin: 4px 0 12px 0;
+  font-size: 20px;
+}
+
+.popup h2, .popup h3{
+  color: #e7e7e7;
+  margin-bottom: 6px;
+  line-height: 1.1;
+}
+
+.message img{
+  width: 50%;
+  height: auto;
+  margin: 20px;
+}
+
+.popup{
+  background: #ff7575;
+  position: fixed;
+  border-radius: 20px 20px 0 0;
+  width: 100%;
+  height: auto;
+  z-index: 25;
+  padding: 32px;
+  bottom: -100%;
+  transition: all 0.6s ease;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.popup h2,
+.popup h3{
+  max-width: 85%;
+}
+
+.popup .closeBtn{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 8%;
+}
+
+.floatWin{
+  position: fixed;
+  min-width: 70%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 30;
+  background: #ffffff;
+  padding: 20px 0;
+  border-radius: 14px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.floatWin .heading{
+  color: #FF6565;
+  text-align: center;
+  margin: 8px 0 20px 0;
+}
+
+.floatWin .desc{
+  width: 80%;
+}
+
+.floatWin .desc h3{
+  margin: 4px 0;
+}
+
+.floatWin .btnContainer{
+  width: 80%;
+}
+
+.floatWin .btnContainer button{
+  background: rgba(0, 0, 0, 0);
+  padding: 16px 0;
+}
+
+.floatWin .btnContainer #cancelBtn h3{
+  color: #959595;
+}
+
+.floatWin .btnContainer #discardBtn h3{
+  color: #FF3636;
+}
+
+.floatWin .btnContainer #saveBtn{
+  margin-left: 16px;
+}
+
+.floatWin .btnContainer #saveBtn h3{
+  color: #28FF98;
+}
+
+.goodRequest{
+  background: #55ff87;
+}
+
+.goodRequest h2,
+.goodRequest h3{
+  color: #525252;
+}
+
+.badRequest{
+  background: #ff7575;
+}
+
+.fixedBtn{
+  position: fixed;
+  z-index: 20;
+  bottom: 18%;
+  right: 5%;
+  background: #B693FF;
+  border-radius: 50%;
+}
+
+.fixedBtn img{
+  margin: 20px;
+}
+
+.darkenBg{
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0,0,0,0.4);
+  z-index: 25;
+}
+
+.logoutBtn{
+  border: 4px solid #ff6743;
+}
+
+.logoutBtn h5{
+  color: #ff6743;
+  font-weight: 600;
+}
+
+
+@media only screen and (min-width: 768px) {
+
+  h1{
+    font-size: 48px;
+  }
+  h3{
+    font-size: 24px;
+  }
+  p{
+    font-size: 16px;
+  }
+  .popup{
+    width: 80%;
+  }
+  .message img{
+    width: 40%;
+    margin: 40px;
+  }
+  .message h3{
+    margin: 4px 0 20px 0;
+  }
+  .slide .question{
+    margin: 20px 0;
+  }
+  .actionBtn{
+    border-radius: 48px;
+  }
+
+}
+
+@media only screen and (min-width: 1080px){
+  .fixedBtn{
+    right: 13%;
+    bottom: 13%;
+  }
+}
+
+@media only screen and (min-width: 1200px){
+  .fixedBtn{
+    right: 13%;
+    bottom: 13%;
+  }
+  .floatWin{
+    min-width: 50%;
+  }
+  .floatWin .desc,
+  .floatWin .btnContainer {
+    width: 80%;
+  }
+  .floatWin .desc, .floatWin .btnContainer{
+    margin: 12px 0 0 0;
+  }
+  .floatWin .btnContainer #saveBtn {
+    margin-left: 32px;
+  }
+  .head .question:first-of-type,
+  .head .question{
+    margin: 20px 0 20px 0;
+  }
+
+}
+
+@media only screen and (min-width: 1366px){
+  .fixedBtn{
+    right: 18%;
+    bottom: 13%;
+  }
 }

@@ -1,0 +1,22 @@
+@media only screen and (min-width: 1200px) {
+  .boxWrapper{
+    margin: 2vh auto;
+    width: 95%;
+  }
+  .boxWrapper .box{
+    margin: 6px 2%;
+    width: 28%;
+  }
+  .boxWrapper .box .desc{
+    margin: 10px;
+  }
+  .boxWrapper .box .desc .title{
+    margin: 2px 0;
+  }
+}
+
+@media only screen and (min-width: 1300px){
+  .boxWrapper{
+    margin: 2vh auto 6vh auto;
+  }
+}

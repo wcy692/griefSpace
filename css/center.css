@@ -6,8 +6,32 @@
   align-items: center;
 }
 
+.alignStart{
+  align-items: flex-start;
+}
+
+.alignBottom{
+  align-items: flex-end;
+}
+
 .justifyCenter{
   justify-content: center;
+}
+
+.justifyEven{
+  justify-content: space-evenly;
+}
+
+.justifyBetween{
+  justify-content: space-between;
+}
+
+.justifyStart{
+  justify-content: flex-start;
+}
+
+.justifyEnd{
+  justify-content: flex-end;
 }
 
 .flexColumn{

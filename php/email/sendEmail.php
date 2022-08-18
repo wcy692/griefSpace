@@ -3,10 +3,17 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
 function sendEmail($uid, $email, $subject, $body, $successUrl, $failUrl){
+  $requestUri = $_SERVER['REQUEST_URI'];
   $sender = 'jamesphpcoding@gmail.com';
-  require '../../PHPMailer/src/Exception.php';
-  require '../../PHPMailer/src/PHPMailer.php';
-  require '../../PHPMailer/src/SMTP.php';
+  if (str_contains($requestUri, 'loginReg/')) {
+    require '../../PHPMailer/src/Exception.php';
+    require '../../PHPMailer/src/PHPMailer.php';
+    require '../../PHPMailer/src/SMTP.php';
+  } else{
+    require '../PHPMailer/src/Exception.php';
+    require '../PHPMailer/src/PHPMailer.php';
+    require '../PHPMailer/src/SMTP.php';
+  }
 
   try {
     $mail = new PHPMailer();
@@ -25,12 +32,22 @@ function sendEmail($uid, $email, $subject, $body, $successUrl, $failUrl){
     $mail->Body=$body;
 
     if ($mail->send()) {
-      header($successUrl);
-      exit();
+      if ($successUrl != null) {
+        header($successUrl);
+        exit();
+      } else{
+        return 'success';
+        exit();
+      }
     }
     else{
-      header($failUrl);
-      exit();
+      if ($failUrl != null) {
+        header($failUrl);
+        exit();
+      } else{
+        return 'failed';
+        exit();
+      }
     }
   } catch (\Exception $e) {
     // header($failUrl);

@@ -92,6 +92,11 @@ use PHPMailer\PHPMailer\Exception;
     $stmt->bindParam(1, $userId, PDO::PARAM_INT);
     $stmt->execute();
 
+    //logout and destroy session
+    session_start();
+    session_unset();
+    session_destroy();
+
     //send activation email
     require '../../email/sendEmail.php';
     require '../../emailTemplate/goodResetEmail.php';
@@ -100,10 +105,11 @@ use PHPMailer\PHPMailer\Exception;
     $successUrl = "Location: ../../../html/resetPwdPage.php?reset=success";
     $failUrl = "Location: ../../../html/resetPwdPage.php?reset=sendErr";
     sendEmail($uid, $email, $subject, $body, $successUrl, $failUrl);
+
     exit();
 
   } else{
-    header("Location: ../../../html/login.php");
+    header("Location: ../../../html/loginPage.php");
     exit();
   }
 
