@@ -141,8 +141,8 @@
               $sendRes = '';
               if ($journal_created == 1) {
                 // success and send email based on $journal_created
-                require '../email/sendEmail.php';
-                require '../emailTemplate/journalCreateEmail.php';
+                require_once '../email/sendEmail.php';
+                require_once '../emailTemplate/journalCreateEmail.php';
                 $subject = getSubject();
                 $body = getBody();
                 $sendRes = sendEmail($session_uid, $email, $subject, $body, null, null);
