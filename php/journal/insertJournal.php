@@ -83,7 +83,7 @@
         // get latest createTime
         // get latest journal_id
         $createTime = 0;
-        $old_journal_id = -1;
+        $old_journal_id = 0;
         foreach ($row as $ele) {
           if ((int)$ele['createTime'] > $createTime) {
             $createTime = $ele['createTime'];

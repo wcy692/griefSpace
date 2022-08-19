@@ -126,7 +126,7 @@
 
 @media only screen and (min-width: 768px) {
   #insightPanel{
-    margin: 3vh auto;
+    margin: 3vh auto 10vh auto;
     width: 70%;
   }
   .calWrapper{

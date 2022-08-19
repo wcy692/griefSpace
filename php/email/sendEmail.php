@@ -5,7 +5,7 @@ use PHPMailer\PHPMailer\Exception;
 function sendEmail($uid, $email, $subject, $body, $successUrl, $failUrl){
   $requestUri = $_SERVER['REQUEST_URI'];
   $sender = 'jamesphpcoding@gmail.com';
-  if (str_contains($requestUri, 'loginReg/')) {
+  if (str_contains($requestUri, 'loginReg/') || str_contains($requestUri, 'setting/account') ) {
     require '../../PHPMailer/src/Exception.php';
     require '../../PHPMailer/src/PHPMailer.php';
     require '../../PHPMailer/src/SMTP.php';
