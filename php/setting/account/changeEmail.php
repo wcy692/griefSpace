@@ -25,8 +25,18 @@
       header("Location: ../../../html/setting/changeEmail.php?status=wrongpwd&email=$email");
       exit();
     }
-
     $id = (int)$row[0]['id'];
+
+    $sql = "SELECT email FROM userdata WHERE email=?;";
+    $stmt = $pdo->prepare($sql);
+    $stmt->bindParam(1, $email, PDO::PARAM_STR);
+    $stmt->execute();
+    $row = $stmt->fetchAll();
+    if (count($row) > 0) {
+      header("Location: ../../../html/setting/changeEmail.php?status=exist");
+      exit();
+    }
+
     $sql = 'UPDATE userdata
               SET email=?
               WHERE id=?;';

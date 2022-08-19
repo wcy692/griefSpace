@@ -14,7 +14,7 @@
     $ansArr = json_decode($paramArr[4]);
 
     $statusArr = array();
-    if (empty($journal_id)) {
+    if (!is_numeric($journal_id)) {
       $statusArr['error'] = 'invalid';
     } elseif (empty($title)) {
       $statusArr['title'] = 'empty';

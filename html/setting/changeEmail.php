@@ -40,6 +40,9 @@
         } elseif ($status == 'wrongpwd') {
           echo '<h2>Password Unmatched:</h2>
                 <h3>Incorrect Password.</h3>';
+        } elseif ($status == 'exist') {
+          echo '<h2>Rejected:</h2>
+                <h3>Email address already been used</h3>';
         }
         echo '</div>';
       }
