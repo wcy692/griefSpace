@@ -1,6 +1,10 @@
 # What is griefSpace
 griefSpace is a digital mourning space aiming to provide users with a private space to write journals and visualise their changes in emotions. It aims to adopt the principle of story-telling approach to simulate the process of Cognitive behavioural therapy (CBT).
 
+# Setup
+### Please go to the ./doc/supporting_materials folder and follow the setup guide to have your local folders and phpMyAdmin set up.
+### Also check out the video setup guide on YouTube. Link: https://youtu.be/7d6nicD7PAk
+
 # Feature
 ### 1. Journalling System
 - **Creating, Editing, Reviewing:** griefSpace provides a private space to let users create journal, edit contents and review answer.<br/>
